@@ -49,7 +49,7 @@ function playGame(myMove) {
         }
     }
     getScore(result);
-     below.innerHTML=`<div class='small-box'> Your move : <img class='small-image' src="img/${myMove}.jpg"><br><br><img class='small-image' src="img/${computerMove}.jpg"> : Computer Move <div>`;
+     below.innerHTML=`<div class='small-box'><h5> Your move : </h5><img class='small-image' src="img/${myMove}.jpg"><br><br><img class='small-image' src="img/${computerMove}.jpg"> <h5>: Computer Move</h5> <div>`;
 
     resultOnPage.innerText=`${result}\n`;
 
