@@ -53,7 +53,7 @@ function playGame(myMove) {
 
     resultOnPage.innerText=`${result}\n`;
 
-    document.querySelector('#score').innerText=`\n\nScore :\nWin - ${score.Win}\nLose - ${score.Lose}\nTie - ${score.Tie}`;
+    document.querySelector('#score').innerText=`Win - ${score.Win}\nLose - ${score.Lose}\nTie - ${score.Tie}`;
 
     localStorage.setItem('score', (JSON.stringify(score)));
 }
@@ -95,6 +95,6 @@ function getScore(result) {
 
 function updateScore()
 {
-    document.querySelector('#score').innerHTML=`<br><u><spam style='color:white;font-size:30px;font-weight:bold;padding-bottom:20px;'>Score :</u></spam><br><br>Win - ${score.Win}<br>Lose - ${score.Lose}<br>Tie - ${score.Tie}`;
+    document.querySelector('#score').innerText=`Win - ${score.Win}\nLose - ${score.Lose}\nTie - ${score.Tie}`;
 }
 
