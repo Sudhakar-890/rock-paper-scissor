@@ -2,11 +2,17 @@
 <html>
     <head>
     <title>Rock paper Scissors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body{
             background-color:rgb(47, 80, 110);
             font-family:Georgia, 'Times New Roman', Times, serif;
             color:white;
+        }
+
+        .h1tag{
+            font-size:30px;
+            font-weight:900;
         }
 
         img{
@@ -63,12 +69,21 @@
             font-weight:bold;
             color:rgb(218, 205, 238);
         }
+
+        @media (max-width:425px)
+        {
+            img{
+                width: 150px;
+            }
+
+
+        }
     </style>
     </head>
     <body>
         
         <center>
-            <h1 style='background-color:white;'> <span style="color:red">ROCK</span> <span style="color:rgb(195, 0, 255)"> PAPER</span><span style="color:rgb(161, 189, 2)">  SCISSORS</span></h1>
+            <h1 class="h1tag" style='background-color:white;'> <span style="color:red">ROCK</span> <span style="color:rgb(195, 0, 255)"> PAPER</span><span style="color:rgb(161, 189, 2)">  SCISSORS</span></h1>
             <button class="move-buttons" onclick="playGame('Rock')">
                 <img src="img/Rock.jpg" alt="">
             </button>
