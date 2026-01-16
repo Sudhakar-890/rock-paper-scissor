@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Rock paper Scissors</title>
+    <style>
+        body{
+            background-color:rgb(47, 80, 110);
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            color:white;
+        }
+
+        img{
+            width: 100px;
+            border-radius: 100%;
+            background-color: blue;
+
+        }
+
+        p{
+            font-size:18px;
+        }
+
+        .move-buttons{
+            border-radius:100px;
+        }
+
+        #result-onPage{
+            width:300px;
+            height:100px;
+            background-color:aliceblue;
+            color:yellowgreen;
+            vertical-align:bottom;
+            font-size:50px;
+            padding-top:40px;
+            font-weight:bold;
+            text-shadow:2px 2px rgb(97, 53, 255);
+            box-shadow:2px 2px 10px black;
+        }
+
+        .small-image{
+            width:50px;
+            height:50px;
+
+        }
+
+        .small-box{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            gap:3px;
+            text-decoration:underline;
+            text-underline-offset: 3px;
+
+        }
+
+        .reset-button{
+            padding:20px 15px;
+            border-radius:15px;
+            background-color:rgb(248, 50, 50);
+            border:none;
+            font-size:20px;
+            font-weight:bold;
+            color:rgb(218, 205, 238);
+        }
+    </style>
+    </head>
+    <body>
+        
+        <center>
+            <h1 style='background-color:white;'> <span style="color:red">ROCK</span> <span style="color:rgb(195, 0, 255)"> PAPER</span><span style="color:rgb(161, 189, 2)">  SCISSORS</span></h1>
+            <button class="move-buttons" onclick="playGame('Rock')">
+                <img src="img/Rock.jpg" alt="">
+            </button>
+            <button class="move-buttons" onclick="playGame('Paper')">
+                <img src="img/Paper.jpg" alt="">
+            </button>
+            <button class="move-buttons" onclick="playGame('Scissors')">
+                <img src="img/Scissors.jpg" alt="">
+            </button>
+            
+            <p id="result-onPage"></p>
+            <p id="below"></p>
+            <hr id="hrtag">
+            <p id="score"></p>
+            <button class="reset-button" onclick="
+                score.Win=0;
+                score.Lose=0;
+                score.Tie=0;
+                localStorage.removeItem('score')
+                updateScore();
+            ">Reset Score 
+            </button>
+        </center>
+        <script src="rock-paper-scissor.js"></script>
+
+        </script>
+    </body>
+</html>
